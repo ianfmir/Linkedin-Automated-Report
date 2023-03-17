@@ -24,6 +24,7 @@ def get_txt_from_screenshot(link):
     txt = pytesseract.image_to_string(im1,lang="eng")
     return txt
 
+# Get the company name from the string converted from a screenshot
 def get_company_name(txt):
     company_name = ''
     index_line_break = txt.find("\n")
@@ -31,11 +32,13 @@ def get_company_name(txt):
         company_name += txt[i]
     return company_name
 
+# Get the number of followers from the string converted from a screenshot
 def get_number_of_followers(txt):
     string_before_followers, string_after_followers = txt.split("followers",1)
     split_string_followers = string_before_followers.split()
     return split_string_followers[-1]
 
+# Get the number of employees from the string converted from a screenshot
 def get_number_of_employees(txt):
     string_before_employees, string_after_employees = txt.split("employees",1)
     split_string_employees = string_before_employees.split()

@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['generateLinkedinReport.py'],
+    ['GenerateLinkedInReport.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='generateLinkedinReport',
+    name='GenerateLinkedInReport',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
